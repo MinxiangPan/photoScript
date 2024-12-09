@@ -13,12 +13,12 @@ func main() {
 	processFileExtension := ".arw"
 
 	if len(os.Args) > 2 {
-		targetFileExtension = os.Args[2]
+		targetFileExtension = strings.ToLower(os.Args[2])
 	}
 	fmt.Printf("use %s target extension\n", targetFileExtension)
 
 	if len(os.Args) > 3 {
-		processFileExtension = os.Args[3]
+		processFileExtension = strings.ToLower(os.Args[3])
 	}
 	fmt.Printf("use %s process extension\n", processFileExtension)
 
